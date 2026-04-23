@@ -20,16 +20,29 @@ interactively and sign in).
 
 ## Install
 
-Clone this repo and either run the script directly or symlink it onto your
-`PATH`:
+Clone the repo, then either run `tubesum.sh` directly from the repo, or use the
+installer to symlink it onto your `PATH`:
 
 ```sh
 git clone https://github.com/ktamas77/tubesum.git
 cd tubesum
-chmod +x tubesum.sh
-# optional:
-ln -s "$PWD/tubesum.sh" /usr/local/bin/tubesum
+./install.sh     # symlinks tubesum -> ~/.local/bin/tubesum
 ```
+
+By default the installer targets `~/.local/bin`. Override with:
+
+```sh
+INSTALL_DIR=/usr/local/bin ./install.sh
+```
+
+To remove:
+
+```sh
+./uninstall.sh
+```
+
+The uninstaller only removes the symlink if it points at this repo's
+`tubesum.sh`, so it won't touch an unrelated `tubesum` binary on your PATH.
 
 ## Usage
 
