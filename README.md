@@ -46,6 +46,14 @@ The uninstaller only removes the symlink if it points at this repo's
 
 ## Usage
 
+After `./install.sh`:
+
+```sh
+tubesum <youtube-url>
+```
+
+Or, without installing, from the repo directory:
+
 ```sh
 ./tubesum.sh <youtube-url>
 ```
@@ -53,7 +61,7 @@ The uninstaller only removes the symlink if it points at this repo's
 Example:
 
 ```sh
-./tubesum.sh https://www.youtube.com/watch?v=dQw4w9WgXcQ
+tubesum https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 The first run downloads a whisper ggml model (default: `base.en`, ~142 MB) into
@@ -71,7 +79,7 @@ Environment variables:
 Use a multilingual model for non-English videos:
 
 ```sh
-TUBESUM_MODEL=small ./tubesum.sh <youtube-url>
+TUBESUM_MODEL=small tubesum <youtube-url>
 ```
 
 ## How it works
